@@ -144,32 +144,43 @@ ___
     save_button.pack()
 
 
+button_python = tk.Button(root, text="Code a completer(ruby)", command=display_python_info, font=("Helvetica", 16))
+button_python.pack(side="top", padx=10, pady=10)
+
+def display_python_info():
+    python_info = """
+Le C++ est un langage de programmation polyvalent et puissant. Il s'agit d'une extension du langage C, ajoutant des 
+fonctionnalités telles que la programmation orientée objet. Voici un résumé des points clés du C++ :
+
+    Syntaxe et Structure : Le C++ a une syntaxe similaire au C, avec des blocs de code délimités par des accolades "{}". 
+    Les programmes C++ commencent généralement par une fonction "main()" qui est le point d'entrée du programme.
+
+    Programmation Orientée Objet : Le C++ prend en charge la programmation orientée objet (POO) avec des classes et des objets. 
+    Une classe est un modèle pour créer des objets qui regroupent les données et les fonctions associées. L'encapsulation, l'héritage 
+    et le polymorphisme sont des concepts importants de la POO en C++.
+
+    Gestion de la Mémoire : Le C++ offre un contrôle précis de la mémoire grâce à la gestion manuelle des ressources à l'aide de pointeurs. 
+    Cela peut être puissant mais nécessite également une attention particulière pour éviter les fuites de mémoire et les erreurs.
+
+    Standard Template Library (STL) : Le C++ comprend une bibliothèque standard riche qui offre des conteneurs de données, des algorithmes et 
+    des itérateurs pour faciliter la programmation. La STL est une partie essentielle du C++ moderne.
+
+    Portabilité : Le C++ est largement utilisé dans les applications système, les jeux, les logiciels embarqués et les applications hautes performances 
+    en raison de sa portabilité et de son efficacité.
+
+    Compatibilité avec le C : Le C++ peut être utilisé pour appeler des fonctions écrites en C, permettant une intégration aisée avec du code C existant.
+
+    Prise en charge multiplateforme : Le C++ est disponible sur la plupart des systèmes d'exploitation, y compris Windows, macOS et les distributions Linux.
+    """
+    info_window = tk.Toplevel(root)
+    info_window.title("Python")
+
+    label = tk.Label(info_window, text=python_info, font=("Helvetica", 12), justify="left", padx=20, pady=20)
+    label.pack()
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-button_code_to_complete = tk.Button(root, text="Code à compléter (Ruby)", command=display_code_to_complete, font=("Helvetica", 16))
-button_code_to_complete.pack(side="top", padx=10, pady=10)
-
-
-
-
-
-
-
+button_python = tk.Button(root, text="C++", command=display_python_info, font=("Helvetica", 16))
+button_python.pack(side="top", padx=10, pady=10)
 
 root.mainloop()
-
